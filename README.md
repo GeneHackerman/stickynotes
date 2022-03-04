@@ -1,1 +1,1 @@
-# stickynotes
+# Note Taker Starter Code
