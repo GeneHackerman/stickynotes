@@ -1,16 +1,30 @@
+const PORT = process.env.PORT || 3001;
 const express = require('express');
+const app = express();
+
 const fs = require('fs');
 const path = require('path');
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
-app.use(express.urlencoded({ extended: true }));
+// built-in middleware for express
+app.use(express.urlencoded({
+    extended: true
+}));
+
+
+// specifies root directory to pull assets from
+app.use(express.static('public'));
 app.use(express.json());
-app.use(express.static(__dirname));
 
-// require('./routes/routes')(app);
+// connects routes to application
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+// makes sure connection to server is live
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
 });
+
+
