@@ -4,7 +4,7 @@ const router = require('express').Router();
 const { notes } = require('../../db/db');
 
 // creates or deletes a note
-const { noteCreateNewNote, noteDeleteNote } = require('../../lib/notefunctions');
+const { noteCreateNewNote, noteDeleteNote } = require('./lib/notefunctions');
 
 //save note history json db
 router.get('/notes', (req, res) => {
