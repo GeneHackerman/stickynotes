@@ -5,8 +5,8 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./develop/routes/apiRoutes');
+const htmlRoutes = require('./develop/routes/htmlRoutes');
 
 // built-in middleware for express
 app.use(express.urlencoded({
