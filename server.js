@@ -10,9 +10,7 @@ const app = express();
 
 
 // built-in middleware for express
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 
 
 // specifies root directory to pull assets from
