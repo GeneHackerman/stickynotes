@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const notesRoutes = require('./noteRoutes');
+const notesRoutes = require('/apiRoutes/noteRoutes');
 
 // uses specified middleware
 router.use(notesRoutes);
