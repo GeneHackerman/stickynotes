@@ -1,10 +1,10 @@
 const router = require('express').Router();
 
 // notes history stored as json object
-const { notes } = require('./db/db');
+const { notes } = require('../../db/db.json');
 
 // creates or deletes a note
-const { noteCreateNewNote, noteDeleteNote } = require('./assets/index.js');
+const { saveNote, deleteNote } = require('../../lib/noteFunction');
 
 //save note history json db
 router.get('/api/notes', (req, res) => {
@@ -15,12 +15,12 @@ router.get('/api/notes', (req, res) => {
 router.post('/api/notes', (req, res) => {
     //req.body holds parameters that are sent from client as POST request
     req.body.id = notes.length.toString();
-    let note = noteCreateNewNote(req.body, notes);
+    let note = saveNote(req.body, notes);
     res.json(note);
 });
 
 router.delete('/api/notes/:id', (req, res) => {
-    noteDeleteNote(notes, req.params.id);
+    deleteNote(notes, req.params.id);
     res.json(notes);
 });
 
