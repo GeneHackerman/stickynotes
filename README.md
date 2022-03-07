@@ -37,4 +37,9 @@
   ## Credits
   Rafael Arias
   
+  ![notetaker1](https://user-images.githubusercontent.com/93616797/156951664-0695d001-aae6-42cc-b6de-47f6bb6bd8ac.png)
+  ![notetaker2](https://user-images.githubusercontent.com/93616797/156951666-086a7c98-7e52-411c-8d31-7da9cc205cfc.png)
+  ![notetaker3](https://user-images.githubusercontent.com/93616797/156951681-b202b4da-6216-419a-86a4-2dbe3818fd64.png)
+
+
   
